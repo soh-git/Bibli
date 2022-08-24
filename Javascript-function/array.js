@@ -3,6 +3,9 @@ function allElementsDistincts(array) {
     array.forEach(el=>{s.add(el)})
     return (s.size == array.length);
 }
+function removeDeplicateEl(myArray) {
+    return [... new Set(myArray)]
+}
 
 const lowerCaseCharacterIndex = (char) => {
     if (typeof(char)!= String && char.toUpperCase()=== char) return false
