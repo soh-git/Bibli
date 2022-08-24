@@ -25,3 +25,7 @@ function difference(arr1,arr2) { arr1.filter(x => !arr2.includes(x)) }
 // For a symmetric difference, you can do:   
 // let differenceSym = arr1.filter(x => !arr2.includes(x)).concat(arr2.filter(x => !arr1.includes(x)));
 function shuffle(myArray){ return myArray.sort(() => Math.random() - 0.5)}
+
+function cloneArray(myArray){
+    return myArray.map(a => Array.isArray(a) ? cloneArray(item) : a);
+}
