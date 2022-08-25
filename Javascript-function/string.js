@@ -5,6 +5,6 @@ function countWords(str) {
   }
 
 function removePonctution(s) {
-    var punctuationless = s.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
-return finalString = punctuationless.replace(/\s{2,}/g," ");
+    var punctuationless = s.replace(/[.,\/#!$%\^&\*;:{}<>=\-_`~()]/g,"");
+return  punctuationless.replace(/\s{2,}/g," ");
 }
