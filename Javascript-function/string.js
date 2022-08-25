@@ -3,3 +3,8 @@ function countWords(str) {
   
     return arr.filter(word => word !== '').length;
   }
+
+function removePonctution(s) {
+    var punctuationless = s.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+return finalString = punctuationless.replace(/\s{2,}/g," ");
+}
