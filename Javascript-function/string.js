@@ -16,3 +16,11 @@ function  NbWordsDistincts(str) {
     return nb.size
 }
 console.log(NbWordsDistincts(" je ne sais pas. pas du tout mais mais"))
+
+function onlyLatinCharacters(str) {
+    return /^[a-zA-Z]+$/.test(str);
+  }
+  
+  console.log(onlyLatinCharacters('bolorr')); // 👉️ true
+  console.log(onlyLatinCharacters('aa aaa')); // 👉️ false parcce que esoace
+  console.log(onlyLatinCharacters('pizjjjza,cjj')); // 👉️ false
