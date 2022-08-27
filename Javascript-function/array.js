@@ -29,3 +29,6 @@ function shuffle(myArray){ return myArray.sort(() => Math.random() - 0.5)}
 function cloneArray(myArray){
     return myArray.map(a => Array.isArray(a) ? cloneArray(item) : a);
 }
+
+
+// helpers https://medium.com/swlh/array-helper-methods-in-es6-28fc5e5a5dc9
