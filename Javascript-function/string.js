@@ -23,9 +23,9 @@ function onlyLatinCharacters(str) {
   }
   function readingTime(text) {
     const wpm = 225;
-    const words = 
+    const words = countWords(text)
     const time = Math.ceil(words / wpm);
-    document.getElementById("time").innerText = time;
+    return time;
   }
   readingTime();
   console.log(onlyLatinCharacters('bolorr')); // 👉️ true
