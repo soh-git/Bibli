@@ -9,6 +9,10 @@ function removePonctution(s) {
     var punctuationless = s.replace(/[.,\/#!?§%\^&\*;:{<>}=\-_`~()]/g,"");
 return  punctuationless.replace(/\s{2,}/g," ");
 }
+function lowerCaseCharacterIndex (char) {
+    //  if (typeof(char)!= String) return false
+     if(char.toUpperCase()=== char)return false
+     return char.charCodeAt(0) - 97}
 
 function  NbWordsDistincts(str) {
     str = removePonctution (str)

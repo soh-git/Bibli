@@ -9,10 +9,7 @@ module.exports ={
 } ,
  removeFalseEl(myArray) {
     return myArray.filter(Boolean)
-},  lowerCaseCharacterIndex : (char) => {
-//  if (typeof(char)!= String) return false
- if(char.toUpperCase()=== char)return false
- return char.charCodeAt(0) - 97},
+}, 
 
 }
 
