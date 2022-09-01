@@ -43,8 +43,4 @@ function isInt(value) {
     return true;
   }
       
-      
-  function getRandomNumber() {
-      
-      return Math.floor((Math.random() * 100000000) + 9999999).toString();
-  }
+ 
