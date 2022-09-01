@@ -33,6 +33,7 @@ function timeSinceFR(date) {
 
     return "il y a " + Math.floor(seconds) + " seconde("+ s;
 }
+
 function timeSinceEN(date) {
 
     var seconds = Math.floor((new Date() - date) / 1000);
@@ -47,6 +48,6 @@ function timeSinceEN(date) {
     interval = seconds / 3600;
     if (interval > 1) return Math.floor(interval) + " hour"+( interval >=2 ? "s": "")+ " ago";
     interval = seconds / 60;
-    if (interval > 1)  return Math.floor(interval) +" minute" (+ interval >=2 ? "s": "")+ " ago";
-    return Math.floor(seconds) +"second"(+ seconds >=2 ? "s" : "")+ " ago";
+    if (interval > 1)  return Math.floor(interval) +" minute"+ ( interval >=2 ? "s": "")+ " ago";
+    return Math.floor(seconds) +"second"+( seconds >=2 ? "s" : "")+ " ago";
 }
