@@ -22,31 +22,29 @@ function isInt(value) {
       }
   }
   
-  //return true if the number is odd
   function isOdd(num) {
     return num % 2 != 0;
   }
   
-  // return true if the number is even
   function isEven(num){
     return num % 2 == 0;
   }
   
-  // return true if the number is prime
   function isPrime(num){
-    if (! num || ! isNumeric(num)) {
-      return false;
-    if(num==2) 
-      return true;
-    for(i=2;i<Math.sqrt(num);i++) {
+    if (! num || ! isNumeric(num)) return false
+    if(num < 2) return false
+    if ( num== 2 || num == 3) return true
+    if(num > 2  && num % 2 == 0) return false
+   
+    for(i=5;i<Math.sqrt(num);i+2) {
       if(num % i==0) 
-        return false; // otherwise it's a prime no.
+        return false;
     }
     return true;
   }
       
       
   function getRandomNumber() {
-      //generates 8 digit random integer as string
+      
       return Math.floor((Math.random() * 100000000) + 9999999).toString();
   }
