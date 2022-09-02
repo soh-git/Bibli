@@ -52,13 +52,7 @@ function timeSinceEN(date) {
     return Math.floor(seconds) +"second"+( seconds >=2 ? "s" : "")+ " ago";
 }
 
-function replace (str, occurrence, replacement, caseSensitive)
-{
-    var pattern = occurrence.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-    var flags = (caseSensitive === false ? 'gi' : 'g');
-    var regex = new RegExp(pattern, flags);
-    return str.replace(regex, String(replacement));
-}
+
  function dateFormat(date, str) {
    
   

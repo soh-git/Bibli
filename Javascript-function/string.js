@@ -31,7 +31,14 @@ function onlyLatinCharacters(str) {
     const time = Math.ceil(words / wpm);
     return time;
   }
-  readingTime();
+  function replace (str, occurrence, replacement, caseSensitive)
+{
+    var pattern = occurrence.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    var flags = (caseSensitive === false ? 'gi' : 'g');
+    var regex = new RegExp(pattern, flags);
+    return str.replace(regex, String(replacement));
+}
+
   console.log(onlyLatinCharacters('bolorr')); // 👉️ true
   console.log(onlyLatinCharacters('aa aaa')); // 👉️ false parcce que esoace
   console.log(onlyLatinCharacters('pizjjjza,cjj')); // 👉️ false
