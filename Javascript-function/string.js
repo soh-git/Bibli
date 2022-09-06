@@ -53,3 +53,32 @@ function downloadFileTxt(txt, filename) {
     print.click();
     body.removeChild(print);
   }
+  function listWordsWithOcurrence(txt,array=null) {
+    let list = txt.split(' ').filter(word => word !== '')
+    
+    let lw={}
+    list.forEach(w => {
+        if(!lw[w]) lw[w]=0
+        lw[w]+=1
+    });
+    if(array){
+        let lw2 =[]
+        for ( const w in lw) {
+           lw2.push({word: w , count:lw[w]})
+        }
+        return lw2
+    }
+    return lw
+    
+
+    
+
+  }
+function wordMostUsed(text){
+    removePonctution(text) 
+    let lw = listWordsWithOcurrence(text,true)
+     lw.sort((a,b)=> b.count - a.count)
+    return lw
+
+    
+}
