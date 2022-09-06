@@ -20,7 +20,6 @@ function  NbWordsDistincts(str) {
     var nb= new Set( arr)
     return nb.size
 }
-console.log(NbWordsDistincts(" je ne sais pas. pas du tout mais mais"))
 
 function onlyLatinCharacters(str) {
     return /^[a-zA-Z]+$/.test(str);
@@ -38,7 +37,19 @@ function onlyLatinCharacters(str) {
     var regex = new RegExp(pattern, flags);
     return str.replace(regex, String(replacement));
 }
+function copyToClipboard (copy){
+    navigator.clipboard.writeText(copy);
 
-  console.log(onlyLatinCharacters('bolorr')); // 👉️ true
-  console.log(onlyLatinCharacters('aa aaa')); // 👉️ false parcce que esoace
-  console.log(onlyLatinCharacters('pizjjjza,cjj')); // 👉️ false
+}
+function downloadFileTxt(txt, filename) {
+    txt = '' + txt;
+    filename = filename+".txt" || 'text.txt';
+    console.log(filename)
+    var print = document.createElement('A'),
+        body = document.body;
+    body.appendChild(print);
+    print.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(txt);
+    print.download = filename;
+    print.click();
+    body.removeChild(print);
+  }
