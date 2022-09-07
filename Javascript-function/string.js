@@ -75,7 +75,7 @@ function downloadFileTxt(txt, filename) {
 
   }
 function wordMostUsed(text){
-    removePonctution(text) 
+    let text=removePonctution(text) 
     let lw = listWordsWithOcurrence(text,true)
      lw.sort((a,b)=> b.count - a.count)
     return lw
