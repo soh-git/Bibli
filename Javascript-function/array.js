@@ -29,17 +29,15 @@
 }
 
 function getallOccurrenceIndices(txt, el) {
-const indexes = [];
-let startInd = 0
-while ((index = txt.indexOf(el, startInd)) > -1) {
-    indexes.push(index);
-    startInd = index + el.length;
-}
-
-return indexes
+    const indexes = [];
+    let startInd = 0
+    while ((index = txt.indexOf(el, startInd)) > -1) {
+        indexes.push(index);
+        startInd = index + el.length;
+    }
+    return indexes
     
 }
-
 
 // module.s ={
 //  allElementsDistincts:(array) => {
