@@ -38,7 +38,9 @@ function getallOccurrenceIndices(txt, el) {
     return indexes
     
 }
-
+// const [a, ...b] = [1, 2, 3, 4, 5];
+//a= 1
+//b= [2, 3, 4, 5]
 // module.s ={
 //  allElementsDistincts:(array) => {
 //     let s = new Set();
